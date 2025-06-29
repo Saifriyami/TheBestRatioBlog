@@ -4,45 +4,14 @@
     <meta charset="UTF-8">
     <title>Best Ratio Files</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
-            padding: 20px;
-        }
-
-        h1 {
-            color: #2c3e50;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #007acc;
-            color: white;
-        }
-
-        tr:nth-child(even) {
-            background-color: #eef6fb;
-        }
-
-        a {
-            color: #007acc;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
+        body { font-family: Arial, sans-serif; background-color: #f7f7f7; padding: 20px; }
+        h1 { color: #2c3e50; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #007acc; color: white; }
+        tr:nth-child(even) { background-color: #eef6fb; }
+        a { color: #007acc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -58,26 +27,18 @@
             </tr>
         </thead>
         <tbody>
-            {% for file in grouped_files %}
+            {% for f in files %}
             <tr>
                 <td>{{ forloop.counter }}</td>
-                <td>{{ file.title }}</td>
+                <td>{{ f.date }}</td>
                 <td>
-                    {% if file.csv %}
-                        <a href="{{ file.csv.path|cut:'D:/PythonProjects/TheBestRatioBlog/' }}" download>Download CSV</a>
-                    {% else %}—{% endif %}
+                    {% if f.csv %}<a href="/media/uploads/{{ f.csv }}" download>Download CSV</a>{% else %}—{% endif %}
                 </td>
                 <td>
-                    {% if file.excel %}
-                        <a href="{{ file.excel.path|cut:'D:/PythonProjects/TheBestRatioBlog/' }}" download>Download XL</a>
-                    {% else %}—{% endif %}
+                    {% if f.xlsx %}<a href="/media/uploads/{{ f.xlsx }}" download>Download XL</a>{% else %}—{% endif %}
                 </td>
                 <td>
-                    {% if file.csv %}
-                        <a href="/view_file/{{ file.csv.title }}/">Show</a>
-                    {% elif file.excel %}
-                        <a href="/view_file/{{ file.excel.title }}/">Show</a>
-                    {% else %}—{% endif %}
+                    <a href="/view_file/{{ f.date }}/">Show</a>
                 </td>
             </tr>
             {% endfor %}
@@ -85,3 +46,4 @@
     </table>
 </body>
 </html>
+
