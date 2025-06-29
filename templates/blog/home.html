@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Best Ratio Files</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007acc;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #eef6fb;
+        }
+
+        a {
+            color: #007acc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>📊 Best Ratio Files</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Date</th>
+                <th>CSV Download</th>
+                <th>XL Download</th>
+                <th>Show in Web</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for file in grouped_files %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ file.title }}</td>
+                <td>
+                    {% if file.csv %}
+                        <a href="{{ file.csv.path|cut:'D:/PythonProjects/TheBestRatioBlog/' }}" download>Download CSV</a>
+                    {% else %}—{% endif %}
+                </td>
+                <td>
+                    {% if file.excel %}
+                        <a href="{{ file.excel.path|cut:'D:/PythonProjects/TheBestRatioBlog/' }}" download>Download XL</a>
+                    {% else %}—{% endif %}
+                </td>
+                <td>
+                    {% if file.csv %}
+                        <a href="/view_file/{{ file.csv.title }}/">Show</a>
+                    {% elif file.excel %}
+                        <a href="/view_file/{{ file.excel.title }}/">Show</a>
+                    {% else %}—{% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viewing {{ filename }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background-color: #fdfdfd;
+        }
+
+        h1 {
+            color: #007acc;
+        }
+
+        .table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .table th, .table td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .table th {
+            background-color: #007acc;
+            color: white;
+        }
+
+        .table tr:nth-child(even) {
+            background-color: #f2f9ff;
+        }
+
+        a.back-link {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background: #007acc;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>📄 Viewing: {{ filename }}</h1>
+
+    {{ table_html|safe }}
+
+    <a href="/" class="back-link">⬅ Back to File List</a>
+
+</body>
+</html>
