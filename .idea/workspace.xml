@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa83f019-222f-4e61-8821-857436e8c85a" name="Changes" comment="Done one page table">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="fa83f019-222f-4e61-8821-857436e8c85a" name="Changes" comment="Second" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +24,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Saifriyami"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Saifriyami/TheBestRatioBlog.git",
+    "accountId": "6d26401c-4223-488a-8a62-9de7a3c07993"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -100,7 +110,7 @@
       <option name="presentableId" value="Default" />
       <updated>1751204918974</updated>
       <workItem from="1751204920020" duration="7241000" />
-      <workItem from="1751361558218" duration="5463000" />
+      <workItem from="1751361558218" duration="6281000" />
     </task>
     <task id="LOCAL-00001" summary="Working_need_to download">
       <option name="closed" value="true" />
@@ -118,7 +128,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751217936597</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Second">
+      <option name="closed" value="true" />
+      <created>1751372585631</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1751372585631</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +145,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Working_need_to download" />
     <MESSAGE value="Done one page table" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done one page table" />
+    <MESSAGE value="Second" />
+    <option name="LAST_COMMIT_MESSAGE" value="Second" />
   </component>
 </project>
